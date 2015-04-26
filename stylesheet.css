@@ -1,0 +1,72 @@
+body {
+  background: #2ecc71;
+}
+.logo {
+  position: absolute;
+  width: 90px; height: 90px;
+  top: 50%; left: 50%;
+  margin: -45px 0 0 -45px;
+  background: #2c3e50;
+  font-family: 'Oswald', sans-serif;
+  font-size: 80px;
+  line-height: 70px;
+  color: #fff;
+  cursor: pointer;
+}
+.logo:before,
+.logo:after {
+  transition: all .25s ease-in-out;
+}
+.logo:before {
+  position: absolute;
+  display: block;
+  content: '<';
+  top: 0; left: 0;
+  
+  transform: rotate(-90deg) translate(-40px, -1px);
+  transform-origin: 0 0;
+}
+.logo.active:before,
+.logo:hover:before {
+  transform: rotate(0) translate(-50%, 0);
+}
+.logo:after {
+  position: absolute;
+  display: block;
+  content: '>';
+  top: 0; right: 0;
+  
+  transform: rotate(90deg) translate(8px, -33px);
+  transform-origin: 0 0;
+}
+.logo.active:after,
+.logo:hover:after {
+  transform: rotate(0) translate(50%, 0)
+}
+.logo span {
+  position: absolute;
+  display: block;
+  width: 10px; height: 30px;
+  bottom: 22px; left: 50%;
+  background: #e74c3c;
+  
+  transition: all .25s ease-in-out;
+  
+  transform: translateX(-50%) rotate(0deg);
+}
+.logo.active span,
+.logo:hover span {
+  height: 54px;
+  transform: translateX(-50%) rotate(20deg);
+}
+
+
+h1 {
+  position: absolute;
+  bottom: 20px; right: 20px;
+  margin: 0;
+  font-size: 20px;
+  font-family: 'Oswald';
+  color: #fff;
+  text-align: right;
+}
